@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Electron Modelo</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../files/The_Simpsons_promo.png"><br><br>
+    <label for="file">Progress:</label><br>
+    <progress id="file" value="32" max="100"> 32% </progress>
+  </body>
+</html>

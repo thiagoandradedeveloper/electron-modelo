@@ -1,0 +1,21 @@
+{
+  "name": "electron-modelo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^26.2.1",
+    "electron-pdf-viewer": "^1.0.1",
+    "@types/pg": "^8.10.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "sqlite3": "^5.1.6"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script>
+        const ipcRenderer = require('electron').ipcRenderer;
+        function mostrar(end){
+            ipcRenderer.send('open-pdf', { end: end });
+        }
+        function abrir(end){
+            ipcRenderer.send('open-win', { end: end });
+        }
+
+        ipcRenderer.send('message-channel', { key1: 'value1', key2: 'value2' });        
+        ipcRenderer.on('return', (event, data) => { console.log(data); });
+
+        localStorage.clear();
+    </script>
+  </head>
+  <body>
+    <button onclick="mostrar(__dirname + '/../files/tabela-periodica.pdf')">
+      Mostrar
+    </button>
+    <button onclick="abrir(__dirname + '/win2.html')">
+      Abrir
+    </button>
+    <button onclick="alert(localStorage.getItem('teste'))">
+      Mostrar Valor
+    </button>
+  </body>
+</html>
